@@ -49,7 +49,7 @@ const about = {
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
     display: true,
