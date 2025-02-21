@@ -62,11 +62,6 @@ const effects = {
   },
 };
 
-const display = {
-  location: true,
-  time: true,
-};
-
 const mailchimp = {
   action: "https://url/subscribe/post?parameters",
   effects: {
@@ -106,4 +101,4 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL };
+export { routes, protectedRoutes, effects, style, mailchimp, baseURL };
