@@ -1,12 +1,12 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "QoreTech",
+  firstName: "qoreTech",
   lastName: "",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Automation & Software Experts",
   avatar: "/images/avatar.jpg",
   location: "Europe/Zagreb", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
@@ -47,9 +47,6 @@ const about = {
   tableOfContent: {
     display: true,
     subItems: false,
-  },
-  avatar: {
-    display: false,
   },
   calendar: {
     display: true,
