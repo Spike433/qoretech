@@ -31,7 +31,7 @@ const home = {
   label: "Home",
   title: `Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>You imagine, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we deliver</>,
   subline: (
     <>
       I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
