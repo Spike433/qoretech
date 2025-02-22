@@ -3,8 +3,7 @@ export {
   routes,
   protectedRoutes,
   effects,
-  style,
-  display,
+  style,  
   mailchimp,
   baseURL,
 } from "@/app/resources/config";
@@ -15,5 +14,4 @@ export {
   about,
   blog,
   work,
-  gallery,
 } from "@/app/resources/content";
