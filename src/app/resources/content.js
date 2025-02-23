@@ -57,15 +57,14 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        We craft powerful software solutions, automate processes, and bring smart technology 
+        into your home and business. Let’s create something amazing together.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Our Services",
     experiences: [
       {
         company: "FLY",
@@ -109,17 +108,33 @@ const about = {
       },
     ],
   },
-  studies: {
+  ourServices: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Our Services",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "🌐 Web Development",
+        description: <>Create stunning and responsive websites tailored to your business needs.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "📱 Mobile App Development",
+        description: <>Develop user-friendly mobile applications for both Android and iOS platforms.</>,
+      },
+      {
+        name: "☁️ Cloud Computing",
+        description: <>Leverage the power of the cloud to scale your applications and services.</>,
+      },
+      {
+        name: "🔒 Cybersecurity",
+        description: <>Protect your digital assets with our comprehensive cybersecurity solutions.</>,
+      },
+      {
+        name: "🧠 Artificial Intelligence",
+        description: <>Implement AI solutions to automate tasks and enhance decision-making processes.</>,
+      },
+      {
+        name: "🏠 Smart Home Automation",
+        description: <>Control your home remotely with intuitive web and mobile interfaces for ultimate convenience.</>,
       },
     ],
   },
