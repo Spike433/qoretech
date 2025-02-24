@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
 
 import { baseURL } from "@/app/resources";
 import { home, person } from "@/app/resources/content";
@@ -52,8 +51,8 @@ export default function Home() {
             },
           }),
         }}
-      />               
-      <Projects range={[2]} />      
+      />    
+                 
     </Column>
   );
 }

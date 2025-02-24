@@ -1,6 +1,5 @@
 import { getPosts } from "@/app/utils/utils";
 import { Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
 import { baseURL } from "@/app/resources";
 import { person, work } from "@/app/resources/content";
 
@@ -63,7 +62,7 @@ export default function Work() {
           }),
         }}
       />
-      <Projects />
+      
     </Column>
   );
 }
