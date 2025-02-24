@@ -241,6 +241,26 @@ export default function About() {
             </>
           )}
 
+          {about.chooseUs.display && (
+            <>
+              <Heading as="h2" id={about.chooseUs.title} variant="display-strong-s" marginBottom="m">
+                {about.chooseUs.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.chooseUs.institutions.map((institution, index) => (
+                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                    <Text id={institution.name} variant="heading-strong-l">
+                      {institution.name}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {institution.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
           {about.technical.display && (
             <>
               <Heading

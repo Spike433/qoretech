@@ -142,6 +142,28 @@ const about = {
       },      
     ],
   },
+  chooseUs: {
+    display: true, // set to false to hide this section
+    title: "Why Choose Us?",
+    institutions: [      
+      {
+        name: "🚀 Tailored Solutions",
+        description: <>We develop software that fits your exact needs.</>,
+      },
+      {
+        name: "⚡ Cutting-Edge Technology",
+        description: <>We use the latest tools and frameworks.</>,
+      },
+      {
+        name: "🛠️ Seamless Integration",
+        description: <>Our solutions work with your existing systems.</>,
+      },
+      {
+        name: "💡 Innovative Approach",
+        description: <>We combine creativity with technical expertise.</>,
+      }, 
+    ],
+  },
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
