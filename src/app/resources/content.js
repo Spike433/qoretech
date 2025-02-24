@@ -144,7 +144,7 @@ const about = {
   },
   chooseUs: {
     display: true, // set to false to hide this section
-    title: "Why Choose Us?",
+    title: "Our Commitment",
     institutions: [      
       {
         name: "🚀 Tailored Solutions",
