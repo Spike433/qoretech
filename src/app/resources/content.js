@@ -6,10 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Automation & Software Experts",
-  avatar: "/images/avatar.jpg",
-  location: "Europe/Zagreb", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
+  role: "Automation & Software Experts", 
 };
 
 const social = [
@@ -199,7 +196,7 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "",
             alt: "Project image",
             width: 16,
             height: 9,
