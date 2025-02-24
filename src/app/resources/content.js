@@ -42,15 +42,10 @@ const home = {
 
 const about = {
   label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: "Home",
   tableOfContent: {
     display: true,
     subItems: false,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
   },
   intro: {
     display: true,
