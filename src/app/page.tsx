@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
+import { Column } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person } from "@/app/resources/content";
-import { Posts } from "@/components/blog/Posts";
+import { baseURL } from "@/app/resources";
+import { home, person } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = home.title;
