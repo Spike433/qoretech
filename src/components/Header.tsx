@@ -38,7 +38,6 @@ export const Header = () => {
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
-              <Line vert maxHeight="24" />
               {routes["/about"] && (
                 <>
                   <ToggleButton
