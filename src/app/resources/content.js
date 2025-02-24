@@ -152,19 +152,7 @@ const about = {
       {
         name: "Innovative Approach  💡",
         description: <>We combine creativity with technical expertise.</>,
-      }, 
-      {
-        name: "Contact Information",
-        description: (
-          <>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp: +1234567890
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: contact@example.com
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: +0987654321
-          </>
-        ),
-      },
+      },       
     ],
   },  
   contact: {
@@ -172,9 +160,13 @@ const about = {
     title: "Contact",
     institutions: [      
       {
-        name: "Contact",
-        description: <>Phone.</>,
-      },      
+        name: "WhatsApp 📞",
+        description: <>+1234567890</>,
+      },
+      {
+        name: "Email 📨",
+        description: <>mateo@qoretech.eu</>,
+      },
     ],
   },  
 };
