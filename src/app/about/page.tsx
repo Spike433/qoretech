@@ -62,6 +62,16 @@ export default function About() {
       items: about.ourServices.institutions.map((institution) => institution.name),
     },
     {
+      title: about.chooseUs.title,
+      display: about.chooseUs.display,
+      items: about.chooseUs.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.contact.title,
+      display: about.contact.display,
+      items: about.contact.institutions.map((institution) => institution.name),
+    },
+    {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),

@@ -64,7 +64,7 @@ const about = {
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Our Services",
+    title: "Work",
     experiences: [
       {
         company: "FLY",
@@ -162,6 +162,28 @@ const about = {
         name: "💡 Innovative Approach",
         description: <>We combine creativity with technical expertise.</>,
       }, 
+      {
+        name: "📞 Contact Information",
+        description: (
+          <>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp: +1234567890
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: contact@example.com
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: +0987654321
+          </>
+        ),
+      },
+    ],
+  },  
+  contact: {
+    display: true, // set to false to hide this section
+    title: "Contact",
+    institutions: [      
+      {
+        name: "Contact",
+        description: <>Phone.</>,
+      },      
     ],
   },
   technical: {
