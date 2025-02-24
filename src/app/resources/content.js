@@ -53,9 +53,9 @@ const about = {
       </>
     ),
   },
-  work: {
+  projects: {
     display: true, // set to false to hide this section
-    title: "Work",
+    title: "Projects",
     experiences: [
       {
         company: "FLY",
