@@ -1,14 +1,11 @@
 import {
-  Button,
   Column,
   Flex,
   Heading,  
-  IconButton,
   SmartImage,
   Text,
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
-import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 
@@ -42,23 +39,6 @@ export async function generateMetadata() {
 }
 
 export default function About() {
-  const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.ourServices.title,
-      display: about.ourServices.display,
-      items: about.ourServices.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.chooseUs.title,
-      display: about.chooseUs.display,
-      items: about.chooseUs.institutions.map((institution) => institution.name),
-    },        
-  ];
   return (
     <Column maxWidth="m">
       <script
