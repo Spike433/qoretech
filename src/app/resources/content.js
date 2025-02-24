@@ -144,26 +144,26 @@ const about = {
   },
   chooseUs: {
     display: true, // set to false to hide this section
-    title: "Our Commitment",
+    title: "What Sets Us Apart",
     institutions: [      
       {
-        name: "🚀 Tailored Solutions",
+        name: "Tailored Solutions",
         description: <>We develop software that fits your exact needs.</>,
       },
       {
-        name: "⚡ Cutting-Edge Technology",
+        name: "Cutting-Edge Technology",
         description: <>We use the latest tools and frameworks.</>,
       },
       {
-        name: "🛠️ Seamless Integration",
+        name: "Seamless Integration",
         description: <>Our solutions work with your existing systems.</>,
       },
       {
-        name: "💡 Innovative Approach",
+        name: "Innovative Approach",
         description: <>We combine creativity with technical expertise.</>,
       }, 
       {
-        name: "📞 Contact Information",
+        name: "Contact Information",
         description: (
           <>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp: +1234567890
