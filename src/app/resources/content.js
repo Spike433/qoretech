@@ -54,7 +54,7 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Welcome",
     description: (
       <>
         We craft powerful software solutions, automate processes, and bring smart technology 
