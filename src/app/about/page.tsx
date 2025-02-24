@@ -1,13 +1,10 @@
 import {
-  Avatar,
   Button,
   Column,
   Flex,
-  Heading,
-  Icon,
+  Heading,  
   IconButton,
   SmartImage,
-  Tag,
   Text,
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
