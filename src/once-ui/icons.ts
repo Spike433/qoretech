@@ -21,8 +21,9 @@ import {
   HiCalendarDays,
   HiClipboard,
   HiArrowRight,
+  HiOutlineCog, // Import the settings icon
 } from "react-icons/hi2";
-
+import { IoSettingsOutline } from "react-icons/io5";
 import {
   PiHouseDuotone,
   PiUserCircleDuotone,
@@ -63,4 +64,5 @@ export const iconLibrary: Record<string, IconType> = {
   x: FaXTwitter,
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
+  settings: IoSettingsOutline, // Add the settings icon to the library
 };

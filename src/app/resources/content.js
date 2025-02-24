@@ -26,7 +26,7 @@ const social = [
 
 const home = {
   label: "Home",
-  title: `Portfolio`,
+  title: `qoreTech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>You imagine, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we deliver</>,
   subline: (
@@ -37,8 +37,7 @@ const home = {
   ),
 };
 
-const about = {
-  label: "About",
+const about = {  
   title: "Home",
   tableOfContent: {
     display: true,
