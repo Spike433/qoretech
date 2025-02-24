@@ -52,11 +52,6 @@ export default function About() {
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
       title: about.ourServices.title,
       display: about.ourServices.display,
       items: about.ourServices.institutions.map((institution) => institution.name),
