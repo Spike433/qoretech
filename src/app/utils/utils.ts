@@ -6,7 +6,6 @@ type Team = {
   name: string;
   role: string;
   avatar: string;
-  linkedIn: string;
 };
 
 type Metadata = {

@@ -3,6 +3,7 @@ const baseURL = "qoretech.eu";
 const routes = {
   "/": true,
   "/about": true,  
+  "/contact": true,
 };
 
 // Enable password protection on selected routes

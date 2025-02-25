@@ -10,13 +10,7 @@ const person = {
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts  
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },  
+  // Links are automatically displayed.  
   {
     name: "Email",
     icon: "email",
