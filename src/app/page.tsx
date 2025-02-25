@@ -47,12 +47,7 @@ export default function Home() {
       title: about.ourServices.title,
       display: about.ourServices.display,
       items: about.ourServices.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.chooseUs.title,
-      display: about.chooseUs.display,
-      items: about.chooseUs.institutions.map((institution) => institution.name),
-    },
+    },    
     {
       title: about.contact.title,
       display: about.contact.display,
@@ -170,27 +165,7 @@ export default function Home() {
               </Column>
             </>
           )}
-
-          {about.chooseUs.display && (
-            <>
-              <Heading as="h2" id={about.chooseUs.title} variant="display-strong-s" marginBottom="m" marginTop="l">
-                {about.chooseUs.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.chooseUs.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
+          
           {about.contact.display && (
             <>
               <Heading as="h2" id={about.contact.title} variant="display-strong-s" marginBottom="m" marginTop="l">

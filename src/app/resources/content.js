@@ -132,28 +132,6 @@ const about = {
         description: <>Implement AI solutions to automate tasks and enhance decision-making processes.</>,
       },      
     ],
-  },
-  chooseUs: {
-    display: true, // set to false to hide this section
-    title: "What Sets Us Apart",
-    institutions: [      
-      {
-        name: "Tailored Solutions  🚀",
-        description: <>We develop software that fits your exact needs.</>,
-      },
-      {
-        name: "Cutting-Edge Technology  ⚡",
-        description: <>We use the latest tools and frameworks.</>,
-      },
-      {
-        name: "Seamless Integration  🛠️",
-        description: <>Our solutions work with your existing systems.</>,
-      },
-      {
-        name: "Innovative Approach  💡",
-        description: <>We combine creativity with technical expertise.</>,
-      },       
-    ],
   },  
   contact: {
     display: true, // set to false to hide this section
