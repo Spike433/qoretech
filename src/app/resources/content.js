@@ -25,8 +25,8 @@ const social = [
 ];
 
 const home = {
-  label: "Home",
-  title: `qoreTech`,
+  label: "Welcome",
+  title: `Qore Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>You imagine, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we deliver</>,
   subline: (
