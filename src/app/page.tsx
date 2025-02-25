@@ -10,7 +10,7 @@ import {
 import TableOfContents from "@/components/about/TableOfContents";
 
 import { baseURL } from "@/app/resources";
-import { home, about, person, social } from "@/app/resources/content";
+import { home, about, person } from "@/app/resources/content";
 import styles from "@/components/about/about.module.scss";
 
 export async function generateMetadata() {
@@ -103,35 +103,7 @@ export default function Home() {
               marginTop="s"
             >
               {person.role}
-            </Text>
-            {social.length > 0 && (
-              <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
-                {social.map(
-                  (item) =>
-                    item.link && (
-                        <>
-                            <Button
-                                className="s-flex-hide"
-                                key={item.name}
-                                href={item.link}
-                                prefixIcon={item.icon}
-                                label={item.name}
-                                size="s"
-                                variant="secondary"
-                            />
-                            <IconButton
-                                className="s-flex-show"
-                                size="l"
-                                key={`${item.name}-icon`}
-                                href={item.link}
-                                icon={item.icon}
-                                variant="secondary"
-                            />
-                        </>
-                    ),
-                )}
-              </Flex>
-            )}
+            </Text>            
           </Column>
 
           {about.intro.display && (

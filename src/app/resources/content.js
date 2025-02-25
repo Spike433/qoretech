@@ -9,15 +9,6 @@ const person = {
   role: "Automation & Software Experts", 
 };
 
-const social = [
-  // Links are automatically displayed.  
-  {
-    name: "Email",
-    icon: "email",
-    link: "mailto:mateo@qoretech.eu",
-  },
-];
-
 const home = {
   label: "Welcome",
   title: `Qore Tech`,
@@ -137,4 +128,4 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
-export { person, social, home, about, work };
+export { person, home, about, work };
