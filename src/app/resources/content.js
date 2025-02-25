@@ -126,21 +126,7 @@ const about = {
         description: <>Implement AI solutions to automate tasks and enhance decision-making processes.</>,
       },      
     ],
-  },  
-  contact: {
-    display: true, // set to false to hide this section
-    title: "Contact",
-    institutions: [      
-      {
-        name: "WhatsApp 📞",
-        description: <>+1234567890</>,
-      },
-      {
-        name: "Email 📨",
-        description: <>mateo@qoretech.eu</>,
-      },
-    ],
-  },  
+  },      
 };
 
 const work = {

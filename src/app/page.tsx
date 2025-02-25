@@ -5,7 +5,6 @@ import {
   Flex,
   Heading,  
   IconButton,
-  SmartImage,
   Text,
 } from "@/once-ui/components";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -47,12 +46,7 @@ export default function Home() {
       title: about.ourServices.title,
       display: about.ourServices.display,
       items: about.ourServices.institutions.map((institution) => institution.name),
-    },    
-    {
-      title: about.contact.title,
-      display: about.contact.display,
-      items: about.contact.institutions.map((institution) => institution.name),
-    },        
+    },               
   ];
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
@@ -153,26 +147,6 @@ export default function Home() {
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.ourServices.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-          
-          {about.contact.display && (
-            <>
-              <Heading as="h2" id={about.contact.title} variant="display-strong-s" marginBottom="m" marginTop="l">
-                {about.contact.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.contact.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
