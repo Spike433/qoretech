@@ -89,32 +89,20 @@ const about = {
     title: "Our Services",
     institutions: [
       {
+        name: "🧠 AI",
+        description: <>Implement AI solutions to automate tasks and enhance decision-making processes.</>,
+      },
+      {
+        name: "🏠 IoT Automation",
+        description: <>Control your home remotely with intuitive web and mobile interfaces for ultimate convenience.</>,
+      },        
+      {
         name: "🌐 Web Development",
         description: <>Create stunning and responsive websites tailored to your business needs.</>,
       },
       {
         name: "📱 Mobile App Development",
         description: <>Develop user-friendly mobile applications for both Android and iOS platforms.</>,
-      },
-      {
-        name: "🛠️ Process Automation",
-        description: <>We control your machines with intelligent automation to enhance efficiency.</>,
-      },
-      {
-        name: "🏠 Smart Home Automation",
-        description: <>Control your home remotely with intuitive web and mobile interfaces for ultimate convenience.</>,
-      },
-      {
-        name: "☁️ Cloud Computing",
-        description: <>Leverage the power of the cloud to scale your applications and services.</>,
-      },
-      {
-        name: "🔒 Cybersecurity",
-        description: <>Protect your digital assets with our comprehensive cybersecurity solutions.</>,
-      },
-      {
-        name: "🧠 Artificial Intelligence",
-        description: <>Implement AI solutions to automate tasks and enhance decision-making processes.</>,
       },      
     ],
   },      
