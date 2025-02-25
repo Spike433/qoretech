@@ -20,9 +20,9 @@ import {
   HiEnvelope,
   HiCalendarDays,
   HiClipboard,
-  HiArrowRight,
-  HiOutlineCog, // Import the settings icon
+  HiArrowRight,  
 } from "react-icons/hi2";
+
 import { IoSettingsOutline } from "react-icons/io5";
 import {
   PiHouseDuotone,
@@ -30,6 +30,7 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiShareNetworkThin 
 } from "react-icons/pi";
 
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6";
@@ -64,4 +65,5 @@ export const iconLibrary: Record<string, IconType> = {
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   settings: IoSettingsOutline, // Add the settings icon to the library
+  share: PiShareNetworkThin
 };
