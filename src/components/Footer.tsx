@@ -25,8 +25,12 @@ export const Footer = () => {
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>          
+          <Text paddingX="4">{person.name}</Text>                    
         </Text>        
+        <Flex gap="16">
+        <Text variant="body-default-s">mateo@qoretech.eu</Text>                    
+        </Flex>
+
       </Flex>
       <Flex height="80" show="s"></Flex>
     </Flex>
