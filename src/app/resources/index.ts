@@ -8,7 +8,6 @@ export {
 } from "@/app/resources/config";
 export {
   person,
-  home,
-  about,  
+  home,  
   work,
 } from "@/app/resources/content";
