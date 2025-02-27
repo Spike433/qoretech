@@ -4,6 +4,7 @@ import {
   Input,
   Textarea,
   Button,
+  Text
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import styles from "@/components/about/about.module.scss";
@@ -63,6 +64,7 @@ export default function Contact() {
       />
       <Flex fillWidth mobileDirection="column" horizontal="center">        
         <Column className={styles.blockAlign} flex={9} maxWidth={30} gap="m">
+          <Text variant="heading-strong-xl" align="left">Have any questions? <br/>Feel free to send us an email!</Text>          
           <Input id="name" label="Name" />
           <Input id="email" label="Email" />
           <Textarea id="message" label="Your Message" lines={11} />
