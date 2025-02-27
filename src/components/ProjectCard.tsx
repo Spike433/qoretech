@@ -1,13 +1,14 @@
 "use client";
 
 import {
-  Carousel,
+  
   Column,
   Flex,
   Heading,
   Text,
 } from "@/once-ui/components";
-
+import { CustomCarousel } from "./CustomCarousel";
+import { useRef, useState } from "react";
 interface ProjectCardProps {
   images: string[];
   title: string[];
@@ -20,15 +21,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,  
 }) => {
   
+  const [index, setIndex]= useState(0);
+
+  const handleChangeIndex = (i: number) => {
+    setIndex(i);    
+  };
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
+      <CustomCarousel
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image, i) => ({
           src: image, 
           alt: title[i]
         }))}
-      />
+        onImageClick={(index) => handleChangeIndex(index)}
+      />     
       <Flex
         mobileDirection="column"
         fillWidth
@@ -40,11 +48,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {title && (
           <Flex flex={5} direction="column" gap="s">
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title[0]}
+              {title[index]}
             </Heading>
             {description[0]?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description[0]}
+                {description[index]}
               </Text>
             )}
           </Flex>
