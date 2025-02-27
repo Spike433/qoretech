@@ -8,6 +8,7 @@ import {
   Button
 } from "@/once-ui/components";
 
+import { ProjectCard } from "@/components";
 import { baseURL } from "@/app/resources";
 import { home, person } from "@/app/resources/content";
 
@@ -73,7 +74,13 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        Test
+        <ProjectCard
+          key={1}
+          images={["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"]}
+          title={"AA"}
+          description={"Description"}
+          content={"Content"}          
+        />
       </RevealFx>
             
     </Column>
