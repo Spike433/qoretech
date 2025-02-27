@@ -1,17 +1,14 @@
 import React from "react";
 import {
-  Button,
   Column,
-  Flex,
   Heading,  
-  IconButton,
   Text,
+  RevealFx,
 } from "@/once-ui/components";
-import TableOfContents from "@/components/about/TableOfContents";
 
+import { ProjectCard } from "@/components";
 import { baseURL } from "@/app/resources";
-import { home, about, person } from "@/app/resources/content";
-import styles from "@/components/about/about.module.scss";
+import { home, person } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -36,18 +33,13 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.ourServices.title,
-      display: about.ourServices.display,
-      items: about.ourServices.institutions.map((institution) => institution.name),
-    },               
+
+  const images = [
+      "/images/1.jpg" ,
+      "/images/2.jpg" ,
+      "/images/3.jpg" 
   ];
+  
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
@@ -71,68 +63,30 @@ export default function Home() {
             },
           }),
         }}
-      />    
-      {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          hide="s"
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
-      )}
-      <Flex fillWidth mobileDirection="column" horizontal="center">        
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <Column
-            id={about.intro.title}
-            fillWidth
-            minHeight="160"
-            vertical="center"
-            marginBottom="32"
-          >            
-            <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
+      />
+      <Column fillWidth paddingY="l" gap="m">
+        <Column maxWidth="s">
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+            <Heading wrap="balance" variant="display-strong-l">
+              {home.headline}
             </Heading>
-            <Text
-              className={styles.textAlign}
-              variant="display-default-xs"
-              onBackground="neutral-weak"
-              marginTop="s"
-            >
-              {person.role}
-            </Text>            
-          </Column>
-
-          {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
-            </Column>
-          )}
-          
-          {about.ourServices.display && (
-            <>
-              <Heading as="h2" id={about.ourServices.title} variant="display-strong-s" marginBottom="m">
-                {about.ourServices.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.ourServices.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}          
+          </RevealFx>
+          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+              {home.subline}
+            </Text>
+          </RevealFx>          
         </Column>
-      </Flex>
+      </Column>
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={images}
+          title={["AI Automation", "Data Science", "Web Development"]}
+          description={["Automate your business processes with AI", "Get insights from your data", "Build your website"]}
+        />
+      </RevealFx>
+            
     </Column>
   );
 }

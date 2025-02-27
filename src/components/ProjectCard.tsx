@@ -1,44 +1,42 @@
 "use client";
 
 import {
-  AvatarGroup,
-  Carousel,
+  
   Column,
   Flex,
   Heading,
-  SmartLink,
   Text,
 } from "@/once-ui/components";
-
+import { CustomCarousel } from "./CustomCarousel";
+import { useRef, useState } from "react";
 interface ProjectCardProps {
-  href: string;
-  priority?: boolean;
   images: string[];
-  title: string;
-  content: string;
-  description: string;
-  avatars: { src: string }[];
-  link: string;
+  title: string[];
+  description: string[];  
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
-  href,
   images = [],
-  title,
-  content,
-  description,
-  avatars,
-  link,
+  title,  
+  description,  
 }) => {
+  
+  const [index, setIndex]= useState(0);
+
+  const handleChangeIndex = (i: number) => {
+    setIndex(i);    
+  };
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
+      <CustomCarousel
         sizes="(max-width: 960px) 100vw, 960px"
-        images={images.map((image) => ({
-          src: image,
-          alt: title,
+        images={images.map((image, i) => ({
+          src: image, 
+          alt: title[i]
         }))}
-      />
+        onImageClick={(index) => handleChangeIndex(index)}
+      />     
       <Flex
         mobileDirection="column"
         fillWidth
@@ -48,42 +46,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
+          <Flex flex={5} direction="column" gap="s">
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
+              {title[index]}
             </Heading>
-          </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
-            {description?.trim() && (
+            {description[0]?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
+                {description[index]}
               </Text>
             )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
-                <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={link}
-                >
-                  <Text variant="body-default-s">View project</Text>
-                </SmartLink>
-              )}
-            </Flex>
-          </Column>
-        )}
+          </Flex>
+        )}        
       </Flex>
     </Column>
   );

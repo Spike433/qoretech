@@ -7,11 +7,12 @@ import {
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import styles from "@/components/about/about.module.scss";
-import { person, about } from "@/app/resources/content";
+import { person } from "@/app/resources/content";
+
+const title = 'Contact';
+const description = 'Contact me for any questions or collaborations.';
 
 export async function generateMetadata() {
-  const title = about.title;
-  const description = about.description;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -50,80 +51,19 @@ export default function About() {
             "@type": "Person",
             name: person.name,
             jobTitle: person.role,
-            description: about.intro.description,
+            description: description,
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,            
             worksFor: {
               "@type": "Organization",
-              name: about.projects.experiences[0].company || "",
+              name: "Projects"
             },
           }),
         }}
       />
       <Flex fillWidth mobileDirection="column" horizontal="center">        
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          
-          {about.projects.display && (
-            <>
-              <Heading as="h2" id={about.projects.title} variant="display-strong-s" marginBottom="m">
-                {about.projects.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.projects.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
-                      </Text>
-                    </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map((achievement: JSX.Element, index: number) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
-                    </Column>
-                    {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
+                    
         </Column>
       </Flex>
     </Column>

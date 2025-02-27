@@ -1,14 +1,19 @@
 import {
   Column,
   Flex,
+  Input,
+  Textarea,
+  Button,
+  Text
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import styles from "@/components/about/about.module.scss";
-import { person, about } from "@/app/resources/content";
+import { person } from "@/app/resources/content";
+
+const title = 'Contact';
+const description = 'Contact me for any questions or collaborations.';
 
 export async function generateMetadata() {
-  const title = about.title;
-  const description = about.description;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -35,7 +40,7 @@ export async function generateMetadata() {
   };
 }
 
-export default function About() {
+export default function Contact() {
   return (
     <Column maxWidth="m">
       <script
@@ -47,20 +52,23 @@ export default function About() {
             "@type": "Person",
             name: person.name,
             jobTitle: person.role,
-            description: about.intro.description,
+            description: description,
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,            
             worksFor: {
               "@type": "Organization",
-              name: about.projects.experiences[0].company || "",
+              name: "Contact",
             },
           }),
         }}
       />
       <Flex fillWidth mobileDirection="column" horizontal="center">        
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          
-          
+        <Column className={styles.blockAlign} flex={9} maxWidth={30} gap="m">
+          <Text variant="heading-strong-xl" align="left">Have any questions? <br/>Feel free to send us an email!</Text>          
+          <Input id="name" label="Name" />
+          <Input id="email" label="Email" />
+          <Textarea id="message" label="Your Message" lines={11} />
+          <Button variant="secondary" fillWidth>Send</Button>
         </Column>
       </Flex>
     </Column>
