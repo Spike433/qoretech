@@ -19,6 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,  
   description,  
 }) => {
+  
   return (
     <Column fillWidth gap="m">
       <Carousel
@@ -39,7 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {title && (
           <Flex flex={5} direction="column" gap="s">
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
+              {title[0]}
             </Heading>
             {description[0]?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
