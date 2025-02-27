@@ -103,39 +103,38 @@ export default function Home() {
             ]}
         />
       </RevealFx>            
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={[
+            "/images/6.jpg" ,            
+          ]}
+          title={
+            [
+              "Internet of Things (IoT)",               
+            ]}
+          description={
+            [
+              "Connecting smart devices with cloud-based solutions to enable real-time monitoring, automation, and data-driven decision-making",               
+            ]}
+        />
+      </RevealFx>            
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={[
+            "/images/8.jpg" ,            
+          ]}
+          title={
+            [
+              "Web Development",
+            ]}
+          description={
+            [
+              "Designing and developing scalable, responsive, and dynamic websites and web applications with a seamless user experience",
+            ]}
+        />
+      </RevealFx>            
     </Column>
   );
 }
-
-// AI Mobile Aplications
-// - Building intelligent mobile applications with AI-powered features
-// - https://www.pinterest.com/pin/417849671697619576/
-
-// AI Automation
-// - Automating repetitive tasks and business processes using AI-powered workflows to improve efficiency and reduce operational costs
-// - slika koja stoji trenutno
-// - 1
-
-// AI-Powered Chatbots & Virtual Assistants
-// - Developing intelligent chatbots and AI-driven customer support systems for 24/7 engagement and automated assistance
-// - https://www.pinterest.com/pin/1086423110100464426/
-
-// Predictive Analytics & Data Science
-// - Leveraging AI to analyze historical data and provide actionable insights for better decision-making and business forecasting
-// - https://www.pinterest.com/pin/906490231247541369/ 
-
-// AI Safety
-// - Ensuring the responsible and secure deployment of AI systems by implementing robust safety measures, ethical AI practices, and risk mitigation strategies
-// - https://www.pinterest.com/pin/559431584954614061/
-
-// Internet of Things (IoT)
-// - Connecting smart devices with cloud-based solutions to enable real-time monitoring, automation, and data-driven decision-making
-// - https://www.pinterest.com/pin/401383385555142343/
-
-// Mobile App Development
-// - Creating high-performance native and cross-platform mobile applications tailored to user needs and business goals
-// - https://www.pinterest.com/pin/654570127122660435/
-
-// Web Development
-// - Designing and developing scalable, responsive, and dynamic websites and web applications with a seamless user experience
-// - https://www.pinterest.com/pin/295619163059999530/ 
