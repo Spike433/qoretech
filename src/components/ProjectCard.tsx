@@ -10,24 +10,22 @@ import {
 
 interface ProjectCardProps {
   images: string[];
-  title: string;
-  content: string;
-  description: string;  
+  title: string[];
+  description: string[];  
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   images = [],
-  title,
-  content,
+  title,  
   description,  
 }) => {
   return (
     <Column fillWidth gap="m">
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
-        images={images.map((image) => ({
-          src: image,
-          alt: title,
+        images={images.map((image, i) => ({
+          src: image, 
+          alt: title[i]
         }))}
       />
       <Flex
@@ -39,21 +37,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
+          <Flex flex={5} direction="column" gap="s">
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
               {title}
             </Heading>
-          </Flex>
-        )}
-        {(description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {description?.trim() && (
+            {description[0]?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
+                {description[0]}
               </Text>
-            )}            
-          </Column>
-        )}
+            )}
+          </Flex>
+        )}        
       </Flex>
     </Column>
   );

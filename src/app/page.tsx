@@ -1,11 +1,9 @@
 import React from "react";
 import {
   Column,
-  Flex,
   Heading,  
   Text,
   RevealFx,
-  Button
 } from "@/once-ui/components";
 
 import { ProjectCard } from "@/components";
@@ -35,6 +33,13 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
+
+  const images = [
+      "/images/1.jpg" ,
+      "/images/2.jpg" ,
+      "/images/3.jpg" 
+  ];
+  
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
@@ -76,10 +81,9 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <ProjectCard
           key={1}
-          images={["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"]}
-          title={"AA"}
-          description={"Description"}
-          content={"Content"}          
+          images={images}
+          title={["AI Automation", "Data Science", "Web Development"]}
+          description={["Automate your business processes with AI", "Get insights from your data", "Build your website"]}
         />
       </RevealFx>
             
