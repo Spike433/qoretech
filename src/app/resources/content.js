@@ -10,15 +10,8 @@ const person = {
 };
 
 const home = {
-  label: "Welcome",
-  title: `Qore Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>You imagine, we deliver</>,
-  subline: (
-    <>
-      We craft powerful software <InlineCode>solutions</InlineCode>, <InlineCode>automate processes</InlineCode>, and bring  technology into your home and business.      
-    </>
-  ),
+  headline: <>You imagine, we deliver</>,  
 };
 
 const work = {

@@ -4,6 +4,7 @@ import {
   Heading,  
   Text,
   RevealFx,
+  InlineCode,
 } from "@/once-ui/components";
 
 import { ProjectCard } from "@/components";
@@ -33,12 +34,6 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-
-  const images = [
-      "/images/1.jpg" ,
-      "/images/2.jpg" ,
-      "/images/3.jpg" 
-  ];
   
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
@@ -68,12 +63,14 @@ export default function Home() {
         <Column maxWidth="s">
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
             <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
+              Qore Tech
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
+            <>
+              We craft powerful software <InlineCode>solutions</InlineCode>, <InlineCode>automate processes</InlineCode>, and bring  technology into your home and business.      
+            </>
             </Text>
           </RevealFx>          
         </Column>
@@ -81,12 +78,64 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <ProjectCard
           key={1}
-          images={images}
-          title={["AI Automation", "Data Science", "Web Development"]}
-          description={["Automate your business processes with AI", "Get insights from your data", "Build your website"]}
+          images={[
+            "/images/1.jpg" ,
+            "/images/1.jpg" ,
+            "/images/3.jpg" ,
+            "/images/4.jpg" ,
+            "/images/5.jpg"
+          ]}
+          title={
+            [
+              "AI Mobile Aplications", 
+              "AI Automation", 
+              "AI-Powered Chatbots & Virtual Assistants",
+              "Predictive Analytics & Data Science",
+              "AI Safety"
+            ]}
+          description={
+            [
+              "Building intelligent mobile applications with AI-powered features", 
+              "Automating repetitive tasks and business processes using AI-powered workflows to improve efficiency and reduce operational costs", 
+              "Developing intelligent chatbots and AI-driven customer support systems for 24/7 engagement and automated assistance",
+              "Leveraging AI to analyze historical data and provide actionable insights for better decision-making and business forecasting",
+              "Ensuring the responsible and secure deployment of AI systems by implementing robust safety measures, ethical AI practices, and risk mitigation strategies"
+            ]}
         />
-      </RevealFx>
-            
+      </RevealFx>            
     </Column>
   );
 }
+
+// AI Mobile Aplications
+// - Building intelligent mobile applications with AI-powered features
+// - https://www.pinterest.com/pin/417849671697619576/
+
+// AI Automation
+// - Automating repetitive tasks and business processes using AI-powered workflows to improve efficiency and reduce operational costs
+// - slika koja stoji trenutno
+// - 1
+
+// AI-Powered Chatbots & Virtual Assistants
+// - Developing intelligent chatbots and AI-driven customer support systems for 24/7 engagement and automated assistance
+// - https://www.pinterest.com/pin/1086423110100464426/
+
+// Predictive Analytics & Data Science
+// - Leveraging AI to analyze historical data and provide actionable insights for better decision-making and business forecasting
+// - https://www.pinterest.com/pin/906490231247541369/ 
+
+// AI Safety
+// - Ensuring the responsible and secure deployment of AI systems by implementing robust safety measures, ethical AI practices, and risk mitigation strategies
+// - https://www.pinterest.com/pin/559431584954614061/
+
+// Internet of Things (IoT)
+// - Connecting smart devices with cloud-based solutions to enable real-time monitoring, automation, and data-driven decision-making
+// - https://www.pinterest.com/pin/401383385555142343/
+
+// Mobile App Development
+// - Creating high-performance native and cross-platform mobile applications tailored to user needs and business goals
+// - https://www.pinterest.com/pin/654570127122660435/
+
+// Web Development
+// - Designing and developing scalable, responsive, and dynamic websites and web applications with a seamless user experience
+// - https://www.pinterest.com/pin/295619163059999530/ 
