@@ -4,11 +4,12 @@ import {
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import styles from "@/components/about/about.module.scss";
-import { person, about } from "@/app/resources/content";
+import { person } from "@/app/resources/content";
+
+const title = 'Contact';
+const description = 'Contact me for any questions or collaborations.';
 
 export async function generateMetadata() {
-  const title = about.title;
-  const description = about.description;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -35,7 +36,7 @@ export async function generateMetadata() {
   };
 }
 
-export default function About() {
+export default function Contact() {
   return (
     <Column maxWidth="m">
       <script
@@ -47,12 +48,12 @@ export default function About() {
             "@type": "Person",
             name: person.name,
             jobTitle: person.role,
-            description: about.intro.description,
+            description: description,
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,            
             worksFor: {
               "@type": "Organization",
-              name: about.projects.experiences[0].company || "",
+              name: "Contact",
             },
           }),
         }}
