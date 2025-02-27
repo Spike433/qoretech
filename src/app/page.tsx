@@ -4,11 +4,12 @@ import {
   Flex,
   Heading,  
   Text,
+  RevealFx,
+  Button
 } from "@/once-ui/components";
 
 import { baseURL } from "@/app/resources";
 import { home, person } from "@/app/resources/content";
-import styles from "@/components/about/about.module.scss";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -56,8 +57,25 @@ export default function Home() {
             },
           }),
         }}
-      />    
-      
+      />
+      <Column fillWidth paddingY="l" gap="m">
+        <Column maxWidth="s">
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
+            <Heading wrap="balance" variant="display-strong-l">
+              {home.headline}
+            </Heading>
+          </RevealFx>
+          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+              {home.subline}
+            </Text>
+          </RevealFx>          
+        </Column>
+      </Column>
+      <RevealFx translateY="16" delay={0.6}>
+        Test
+      </RevealFx>
+            
     </Column>
   );
 }

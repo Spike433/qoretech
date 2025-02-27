@@ -13,11 +13,10 @@ const home = {
   label: "Welcome",
   title: `Qore Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>You imagine, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we deliver</>,
+  headline: <>You imagine, we deliver</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      We craft powerful software <InlineCode>solutions</InlineCode>, <InlineCode>automate processes</InlineCode>, and bring  technology into your home and business.      
     </>
   ),
 };
