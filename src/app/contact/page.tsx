@@ -49,7 +49,7 @@ export default function Contact() {
       const response = await axios.post(endpoint, { ...user, recaptcha: recaptchaValue }, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpsaHlnZ3ZmZGtsbm94enpoeGJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ4NzQ1NTksImV4cCI6MjA1MDQ1MDU1OX0.ZTG5sHfu204nHlW841BI74VZobHadGKWoEyOY9Rraa0`,
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_BEARER_TOKEN}`,
         },
       });
 
@@ -69,6 +69,9 @@ export default function Contact() {
     setIsSending(false);
   };
 
+  const localhost = '6Lczy-UqAAAAAKPvkeSLeU_eU112sjBta8555L8z';
+  const qoretech = '6Le4yeUqAAAAACjZxgbYgHembon8Ah2Js5wHDnhr';
+  
   return (
     <Column maxWidth="m">
       <Flex fillWidth mobileDirection="column" horizontal="center">
@@ -80,7 +83,7 @@ export default function Contact() {
           <Input id="email" label="Email" ref={emailRef} />
           <Textarea id="message" label="Your Message" lines={11} ref={messageRef} />
           <ReCAPTCHA
-            sitekey="6Le4yeUqAAAAACjZxgbYgHembon8Ah2Js5wHDnhr" 
+            sitekey={localhost}
             ref={recaptchaRef}
             theme={"dark"}
             size={"normal"}
