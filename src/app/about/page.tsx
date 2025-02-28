@@ -7,7 +7,6 @@ import {
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import styles from "@/components/about/about.module.scss";
-import { person } from "@/app/resources/content";
 
 const title = 'Contact';
 const description = 'Contact me for any questions or collaborations.';
@@ -49,15 +48,7 @@ export default function About() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            name: person.name,
-            jobTitle: person.role,
             description: description,
-            url: `https://${baseURL}/about`,
-            image: `${baseURL}/images/${person.avatar}`,            
-            worksFor: {
-              "@type": "Organization",
-              name: "Projects"
-            },
           }),
         }}
       />

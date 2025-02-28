@@ -1,6 +1,6 @@
-import { Flex, IconButton, SmartLink, Text } from "@/once-ui/components";
-import { person } from "@/app/resources/content";
+import { Flex, Text } from "@/once-ui/components";
 import styles from "./Footer.module.scss";
+import { title, description } from "@/app/resources/content";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,7 +25,7 @@ export const Footer = () => {
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>                    
+          <Text paddingX="4">{title}</Text>                    
         </Text>        
         <Flex gap="16">
         <Text variant="body-default-s">mateo@qoretech.eu</Text>                    

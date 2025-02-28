@@ -4,16 +4,14 @@ import {
   Heading,  
   Text,
   RevealFx,
+  InlineCode,
 } from "@/once-ui/components";
+import {title, description} from "@/app/resources/content"
 
 import { ProjectCard } from "@/components";
 import { baseURL } from "@/app/resources";
-import { home, person } from "@/app/resources/content";
 
-export async function generateMetadata() {
-  const title = home.title;
-  const description = home.description;
-  
+export async function generateMetadata() {    
   return {
     title,
     description,
@@ -33,12 +31,6 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-
-  const images = [
-      "/images/1.jpg" ,
-      "/images/2.jpg" ,
-      "/images/3.jpg" 
-  ];
   
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
@@ -49,17 +41,13 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: home.title,
-            description: home.description,
+            name: title,
+            description: description,
             url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            image: `${baseURL}/og?title=${encodeURIComponent(title)}`,
             publisher: {
               "@type": "Person",
-              name: person.name,
-              image: {
-                "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
-              },
+              name: title,              
             },
           }),
         }}
@@ -68,12 +56,14 @@ export default function Home() {
         <Column maxWidth="s">
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
             <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
+              Qore Tech
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
+            <>
+              We craft powerful software <InlineCode>solutions</InlineCode>, <InlineCode>automate processes</InlineCode>, and bring  technology into your home and business.      
+            </>
             </Text>
           </RevealFx>          
         </Column>
@@ -81,12 +71,63 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <ProjectCard
           key={1}
-          images={images}
-          title={["AI Automation", "Data Science", "Web Development"]}
-          description={["Automate your business processes with AI", "Get insights from your data", "Build your website"]}
+          images={[
+            "/images/1.jpg" ,
+            "/images/1.jpg" ,
+            "/images/3.jpg" ,
+            "/images/4.jpg" ,
+            "/images/5.jpg"
+          ]}
+          title={
+            [
+              "AI Mobile Aplications", 
+              "AI Automation", 
+              "AI-Powered Chatbots & Virtual Assistants",
+              "Predictive Analytics & Data Science",
+              "AI Safety"
+            ]}
+          description={
+            [
+              "Building intelligent mobile applications with AI-powered features", 
+              "Automating repetitive tasks and business processes using AI-powered workflows to improve efficiency and reduce operational costs", 
+              "Developing intelligent chatbots and AI-driven customer support systems for 24/7 engagement and automated assistance",
+              "Leveraging AI to analyze historical data and provide actionable insights for better decision-making and business forecasting",
+              "Ensuring the responsible and secure deployment of AI systems by implementing robust safety measures, ethical AI practices, and risk mitigation strategies"
+            ]}
         />
-      </RevealFx>
-            
+      </RevealFx>            
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={[
+            "/images/6.jpg" ,            
+          ]}
+          title={
+            [
+              "Internet of Things (IoT)",               
+            ]}
+          description={
+            [
+              "Connecting smart devices with cloud-based solutions to enable real-time monitoring, automation, and data-driven decision-making",               
+            ]}
+        />
+      </RevealFx>            
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={[
+            "/images/8.jpg" ,            
+          ]}
+          title={
+            [
+              "Web Development",
+            ]}
+          description={
+            [
+              "Designing and developing scalable, responsive, and dynamic websites and web applications with a seamless user experience",
+            ]}
+        />
+      </RevealFx>            
     </Column>
   );
 }
