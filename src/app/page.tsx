@@ -111,7 +111,23 @@ export default function Home() {
               "Connecting smart devices with cloud-based solutions to enable real-time monitoring, automation, and data-driven decision-making",               
             ]}
         />
-      </RevealFx>            
+      </RevealFx>   
+      <RevealFx translateY="16" delay={0.6}>
+        <ProjectCard
+          key={1}
+          images={[
+            "/images/7.jpg" ,            
+          ]}
+          title={
+            [
+              "Mobile App Development",
+            ]}
+          description={
+            [
+              "Creating high-performance native and cross-platform mobile applications tailored to user needs and business goals",
+            ]}
+        />
+      </RevealFx>           
       <RevealFx translateY="16" delay={0.6}>
         <ProjectCard
           key={1}
