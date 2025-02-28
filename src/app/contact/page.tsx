@@ -83,6 +83,7 @@ export default function Contact() {
             sitekey="6Le4yeUqAAAAACjZxgbYgHembon8Ah2Js5wHDnhr" 
             ref={recaptchaRef}
             theme={"dark"}
+            size={"normal"}
           />
           <Button variant="secondary" fillWidth loading={isSending} onClick={handleSend}>
             Send
