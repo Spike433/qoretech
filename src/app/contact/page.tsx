@@ -12,6 +12,7 @@ import styles from "@/components/about/about.module.scss";
 import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface User {
   name: string;
@@ -20,10 +21,10 @@ interface User {
 }
 
 export default function Contact() {
-  // Create refs for each input field
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const [isSending, setIsSending] = useState(false);
   const endpoint = "https://jlhyggvfdklnoxzzhxbh.supabase.co/functions/v1/send-qoretech-email";
@@ -31,15 +32,21 @@ export default function Contact() {
   const handleSend = async () => {
     setIsSending(true);
 
-    // Retrieve values from refs
     const user: User = {
       name: nameRef.current?.value || "",
       email: emailRef.current?.value || "",
       message: messageRef.current?.value || "",
     };
 
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      toast.error("Please complete the CAPTCHA.");
+      setIsSending(false);
+      return;
+    }
+
     try {
-      const response = await axios.post(endpoint, user, {
+      const response = await axios.post(endpoint, { ...user, recaptcha: recaptchaValue }, {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpsaHlnZ3ZmZGtsbm94enpoeGJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ4NzQ1NTksImV4cCI6MjA1MDQ1MDU1OX0.ZTG5sHfu204nHlW841BI74VZobHadGKWoEyOY9Rraa0`,
@@ -48,10 +55,10 @@ export default function Contact() {
 
       if (response.status === 200) {
         toast.success("Your message has been sent successfully!");
-        // Clear the inputs
         if (nameRef.current) nameRef.current.value = "";
         if (emailRef.current) emailRef.current.value = "";
         if (messageRef.current) messageRef.current.value = "";
+        recaptchaRef.current?.reset();
       } else {
         toast.error("Failed to send message.");
       }
@@ -72,6 +79,11 @@ export default function Contact() {
           <Input id="name" label="Name" ref={nameRef} />
           <Input id="email" label="Email" ref={emailRef} />
           <Textarea id="message" label="Your Message" lines={11} ref={messageRef} />
+          <ReCAPTCHA
+            sitekey="6Le4yeUqAAAAACjZxgbYgHembon8Ah2Js5wHDnhr" 
+            ref={recaptchaRef}
+            theme={"dark"}
+          />
           <Button variant="secondary" fillWidth loading={isSending} onClick={handleSend}>
             Send
           </Button>
