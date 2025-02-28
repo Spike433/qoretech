@@ -9,19 +9,19 @@ import { baseURL, effects, style } from "@/app/resources";
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
-import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import { title, description } from "@/app/resources/content";
 
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
+    title: title,
+    description: description,
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
+      title: `${title}'s Portfolio`,
       description: "Portfolio website showcasing my work.",
       url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      siteName: `${title}'s Portfolio`,
       locale: "en_US",
       type: "website",
     },

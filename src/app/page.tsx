@@ -6,15 +6,12 @@ import {
   RevealFx,
   InlineCode,
 } from "@/once-ui/components";
+import {title, description} from "@/app/resources/content"
 
 import { ProjectCard } from "@/components";
 import { baseURL } from "@/app/resources";
-import { home, person } from "@/app/resources/content";
 
-export async function generateMetadata() {
-  const title = home.title;
-  const description = home.description;
-  
+export async function generateMetadata() {    
   return {
     title,
     description,
@@ -44,17 +41,13 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: home.title,
-            description: home.description,
+            name: title,
+            description: description,
             url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            image: `${baseURL}/og?title=${encodeURIComponent(title)}`,
             publisher: {
               "@type": "Person",
-              name: person.name,
-              image: {
-                "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
-              },
+              name: title,              
             },
           }),
         }}
