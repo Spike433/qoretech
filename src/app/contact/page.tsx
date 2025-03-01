@@ -83,7 +83,7 @@ export default function Contact() {
           <Input id="email" label="Email" ref={emailRef} />
           <Textarea id="message" label="Your Message" lines={11} ref={messageRef} />
           <ReCAPTCHA
-            sitekey={localhost}
+            sitekey={qoretech}
             ref={recaptchaRef}
             theme={"dark"}
             size={"normal"}
