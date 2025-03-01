@@ -18,7 +18,7 @@ const about = {
       {
         company: "Autoklav",
         timeframe: "2022 - Present",
-        role: "Dr. Skrobic (Food Industry) d.o.o.",
+        role: "Dr. Skrobic d.o.o.",
         achievements: [
           "Engineered a Next.js web platform for live monitoring and automated process control.",
           "Built a Qt-based backend to ensure seamless data exchange between systems.",
@@ -54,6 +54,12 @@ const about = {
             alt: "Autoklav",
             width: 9,
             height: 16,
+          },
+          {
+            src: "/images/4a.jpeg",
+            alt: "Autoklav",
+            width: 16,
+            height: 9,
           },
         ],
       },
