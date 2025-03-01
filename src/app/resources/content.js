@@ -26,15 +26,39 @@ const about = {
         ],
         images: [
           {
-            src: "/images/project-images/autoklav.png",
-            alt: "Once UI Project",
+            src: "/images/1.jpeg",
+            alt: "Autoklav",
             width: 16,
             height: 9,
+          },
+          {
+            src: "/images/2.jpeg",
+            alt: "Autoklav",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/1a.jpg",
+            alt: "Autoklav",
+            width: 9,
+            height: 16,
+          },  
+          {
+            src: "/images/2a.jpg",
+            alt: "Autoklav",
+            width: 9,
+            height: 16,
+          },                    
+          {
+            src: "/images/3a.jpg",
+            alt: "Autoklav",
+            width: 9,
+            height: 16,
           },
         ],
       },
       {
-        company: "Mobile Parcel Lockers",
+        company: "On-To-Go Parcel Lockers",
         timeframe: "2021 - 2022",
         role: "Piklean d.o.o.",
         achievements: [
@@ -44,8 +68,14 @@ const about = {
         ],
         images: [
           {
-            src: "/images/project-images/autoklav.png",
-            alt: "Once UI Project",
+            src: "/images/2c.jpeg",
+            alt: "Autoklav",
+            width: 9,
+            height: 16,
+          },
+          {
+            src: "/images/1c.jpeg",
+            alt: "Autoklav",
             width: 16,
             height: 9,
           },
