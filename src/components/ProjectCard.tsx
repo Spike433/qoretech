@@ -28,15 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <Column fillWidth gap="m">
-      <CustomCarousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        images={images.map((image, i) => ({
-          src: image, 
-          alt: title[i]
-        }))}
-        onImageClick={(index) => handleChangeIndex(index)}
-      />     
+    <Column fillWidth gap="m">         
       <Flex
         mobileDirection="column"
         fillWidth
@@ -58,6 +50,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </Flex>
         )}        
       </Flex>
+      <CustomCarousel
+        sizes="(max-width: 960px) 100vw, 960px"
+        images={images.map((image, i) => ({
+          src: image, 
+          alt: title[i]
+        }))}
+        onImageClick={(index) => handleChangeIndex(index)}
+      />  
     </Column>
   );
 };
