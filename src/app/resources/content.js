@@ -26,7 +26,7 @@ const about = {
         ],
         images: [
           {
-            src: "/images/1.jpeg",
+            src: "/images/1a.jpg",
             alt: "Autoklav",
             width: 16,
             height: 9,
@@ -36,25 +36,7 @@ const about = {
             alt: "Autoklav",
             width: 16,
             height: 9,
-          },
-          {
-            src: "/images/1a.jpg",
-            alt: "Autoklav",
-            width: 9,
-            height: 16,
-          },  
-          {
-            src: "/images/2a.jpg",
-            alt: "Autoklav",
-            width: 9,
-            height: 16,
-          },                    
-          {
-            src: "/images/3a.jpg",
-            alt: "Autoklav",
-            width: 9,
-            height: 16,
-          },
+          },          
           {
             src: "/images/4a.jpeg",
             alt: "Autoklav",
@@ -74,10 +56,10 @@ const about = {
         ],
         images: [
           {
-            src: "/images/2c.jpeg",
+            src: "/images/3a.jpeg",
             alt: "Autoklav",
-            width: 9,
-            height: 16,
+            width: 16,
+            height: 9,
           },
           {
             src: "/images/1c.jpeg",
