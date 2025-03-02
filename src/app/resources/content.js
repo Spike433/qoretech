@@ -6,15 +6,15 @@ const about = {
     display: true, // set to false to hide this section
     title: "Projects",
     experiences: [
-      {
-        company: "KidCareAI",
-        timeframe: "2024 - 2025",
-        role: "Stealth d.o.o.",
-        achievements: [
-          "Developed a mobile application using React Native to provide real-time insights into children's health and safety.",
-        ],
-        images: [],
-      },
+      // {
+      //   company: "KidCareAI",
+      //   timeframe: "2024 - 2025",
+      //   role: "Stealth d.o.o.",
+      //   achievements: [
+      //     "Developed a mobile application using React Native to provide real-time insights into children's health and safety.",
+      //   ],
+      //   images: [],
+      // },
       {
         company: "Autoklav",
         timeframe: "2022 - Present",
