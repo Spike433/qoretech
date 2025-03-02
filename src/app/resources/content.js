@@ -26,7 +26,7 @@ const about = {
         ],
         images: [
           {
-            src: "/images/1a.jpg",
+            src: "/images/1.jpg",
             alt: "Autoklav",
             width: 16,
             height: 9,
