@@ -29,6 +29,11 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const endpoint = "https://jlhyggvfdklnoxzzhxbh.supabase.co/functions/v1/send-qoretech-email";
 
+  const validateEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const handleSend = async () => {
     setIsSending(true);
 
@@ -37,6 +42,24 @@ export default function Contact() {
       email: emailRef.current?.value || "",
       message: messageRef.current?.value || "",
     };
+
+    if (!user.name) {
+      toast.error("Name is required.");
+      setIsSending(false);
+      return;
+    }
+
+    if (!user.email || !validateEmail(user.email)) {
+      toast.error("A valid email is required.");
+      setIsSending(false);
+      return;
+    }
+
+    if (!user.message) {
+      toast.error("Message is required.");
+      setIsSending(false);
+      return;
+    }
 
     const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
