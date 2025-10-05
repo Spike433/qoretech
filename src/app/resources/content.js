@@ -17,7 +17,7 @@ const about = {
       // },
       {
         company: "Autoklav",
-        timeframe: "2022 - Present",
+        timeframe: "2023 - 2025",
         role: "Dr. Skrobic d.o.o.",
         achievements: [
           "Engineered a Next.js web platform for live monitoring and automated process control.",
@@ -47,7 +47,7 @@ const about = {
       },
       {
         company: "On-To-Go Parcel Lockers",
-        timeframe: "2021 - 2022",
+        timeframe: "2023",
         role: "Piklean d.o.o.",
         achievements: [
           "Developed a smart parcel locker system to enable secure, contactless deliveries.",
