@@ -28,7 +28,7 @@ export const Footer = () => {
           <Text paddingX="4">{title}</Text>                    
         </Text>        
         <Flex gap="16">
-        <Text variant="body-default-s">mateo@qoretech.eu</Text>                    
+        <Text variant="body-default-s">qoretech@qoretech.eu</Text>                    
         </Flex>
 
       </Flex>
